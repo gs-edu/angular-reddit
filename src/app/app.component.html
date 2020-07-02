@@ -1,0 +1,15 @@
+<form class="card m-3 p-3 bg-light">
+  <h3>Add a Link</h3>
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" class="form-control" name="title" #newTitle>
+  </div>
+  <div class="form-group">
+    <label for="link">Link:</label>
+    <input id="link" class="form-control" name="link" #newLink>
+  </div>
+
+  <button (click)="addArticle(newTitle, newLink)"
+          class="btn btn-success align-self-end">Submit Link</button>
+</form>
