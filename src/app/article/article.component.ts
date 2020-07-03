@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 
 import {Article } from './article.model';
 
@@ -9,15 +9,10 @@ import {Article } from './article.model';
 })
 export class ArticleComponent implements OnInit {
 
-  @HostBinding('attr.class') cssClass = 'card container';
-  article: Article;
+  @HostBinding('attr.class') cssClass = 'card container mb-3';
+  @Input() article: Article;
 
-  constructor() {
-    this.article = new Article(
-      'Angular',
-      'https://angular.io',
-      10);
-  }
+  constructor() {}
 
   ngOnInit(): void {
   }
